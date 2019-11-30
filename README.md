@@ -1,6 +1,6 @@
 # Fyrlang Native Libraries
 
-This repository contains the precompiled native libraries used by the Fyrlang compiler.
+This repository contains the scripts used to precompile native libraries used by the Fyrlang compiler.
 
 ## Building
 
@@ -17,3 +17,4 @@ These libraries are currently supported:
 
 The script files in this repository are provided with the included [license](LICENSE.md).
 The compiled libraries are subject to the licenses in their respective folders.
+
