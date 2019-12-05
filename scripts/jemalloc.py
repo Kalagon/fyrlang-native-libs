@@ -18,13 +18,13 @@ def get_source():
 
 def prepare():
 	configureScript = ['./configure']
-	configureArgs = ['--disable-libdl', '--enable-static', '--with-jemalloc-prefix=""', '--disable-cxx']
+	configureArgs = ['--enable-static', '--without-export', '--disable-cxx', '--disable-libdl', '--disable-prof-gcc', '--disable-prof-libgcc', '--disable-stats', '--with-jemalloc-prefix=je_']
 	srcDir = "{src}/jemalloc-{version}".format(src=SRC_PATH, version=VERSION)
 	subprocess.run(configureScript + configureArgs, cwd=srcDir, stdout=sys.stdout, stderr=sys.stderr)
 
 def build():
 	srcDir = "{src}/jemalloc-{version}".format(src=SRC_PATH, version=VERSION)
-	subprocess.run([MAKE], cwd=srcDir, stdout=sys.stdout, stderr=sys.stderr)
+	subprocess.run([MAKE, 'build_lib_static'], cwd=srcDir, stdout=sys.stdout, stderr=sys.stderr)
 
 def move_artifact():
 	libFile = "{src}/jemalloc-{version}/lib/libjemalloc.a".format(src=SRC_PATH, version=VERSION)
