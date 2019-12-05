@@ -1,0 +1,8 @@
+tcmalloc
+
+The fastest malloc we've seen; works particularly well with threads and STL.
+It is part of gperftools.
+
+https://gperftools.github.io/gperftools/tcmalloc.html
+https://github.com/gperftools/gperftools
+
