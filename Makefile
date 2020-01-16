@@ -1,18 +1,15 @@
 SRC_PATH=$(CURDIR)/src
 LIB_PATH=$(CURDIR)/lib
+LIBRARIES= jemalloc tcmalloc mimalloc rpmalloc
 
 .PHONY: all
-all: jemalloc tcmalloc
+all: $(LIBRARIES)
 
 .PHONY: clean
 clean:
 	rm -rf src/*
+	find ./lib -name '*.a' -exec rm -rf {} +
 
-.PHONY: jemalloc
-jemalloc:
-	python3 scripts/jemalloc.py $(SRC_PATH) $(LIB_PATH) $(MAKE)
-
-.PHONY: tcmalloc
-tcmalloc:
-	python3 scripts/tcmalloc.py $(SRC_PATH) $(LIB_PATH) $(MAKE)
-
+.PHONY: $(LIBRARIES)
+$(LIBRARIES):
+	python3 scripts/$@.py $(SRC_PATH) $(LIB_PATH) $(MAKE)

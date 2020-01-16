@@ -1,0 +1,7 @@
+mimalloc
+
+mimalloc (pronounced "me-malloc") is a general purpose allocator with excellent performance characteristics.
+Initially developed by Daan Leijen for the run-time systems of the Koka and Lean languages.
+
+https://www.microsoft.com/en-us/research/publication/mimalloc-free-list-sharding-in-action/
+https://github.com/microsoft/mimalloc
