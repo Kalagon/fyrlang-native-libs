@@ -1,6 +1,6 @@
 SRC_PATH=$(CURDIR)/src
 LIB_PATH=$(CURDIR)/lib
-LIBRARIES= jemalloc tcmalloc mimalloc
+LIBRARIES= jemalloc tcmalloc mimalloc rpmalloc
 
 .PHONY: all
 all: $(LIBRARIES)
