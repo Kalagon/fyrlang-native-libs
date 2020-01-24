@@ -16,11 +16,7 @@ These libraries are currently supported:
 - `jemalloc`: The [jemalloc](https://github.com/jemalloc/jemalloc) memory allocator, originally written for FreeBSD
 - `tcmalloc`: Memory allocator included in [gperftools](https://github.com/gperftools/gperftools) by Google
 - `mimalloc`: [mimalloc](https://github.com/microsoft/mimalloc) by Daan Leijen and Microsoft
-
-#### not automatically enabled
-
 - `rpmalloc`: [rpmalloc](https://github.com/mjansson/rpmalloc) by Mattias Jansson
-	- static linking causes issues right now
 
 ### Requirements
 
